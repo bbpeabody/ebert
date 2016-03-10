@@ -1,0 +1,453 @@
+03/09/2016 22:09:34 INFO LOG STARTED
+03/09/2016 22:09:34 INFO Received valid request with command = 'pause'
+03/09/2016 22:09:34 INFO 'pause' matched '^(?=.*\b(pause|stop)\b).*$'
+03/09/2016 22:09:34 INFO Roku sending command 'PLAY' 
+03/09/2016 22:09:34 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Play'
+03/09/2016 22:09:34 INFO Roku POST: Received reply: 
+03/09/2016 22:09:34 INFO Veralite sending command 'BONUS_ROOM_LIGHT_OFF' 
+03/09/2016 22:09:34 INFO Veralite GET HTTP GET 'http://192.168.123.45:3480/data_request?id=action&output_format=xml&DeviceNum=3&serviceId=urn:upnp-org:serviceId:SwitchPower1&action=SetTarget&newTargetValue=0'
+03/09/2016 22:09:34 INFO Veralite GET: Received reply: <?xml version="1.0"?>
+<u:SetTargetResponse xmlns:u="urn:schemas-upnp-org:service:SwitchPower:1">
+<JobID>624</JobID>
+</u:SetTargetResponse>
+
+03/09/2016 22:09:34 INFO Veralite sending command 'MOVIES_SIGN_DIM_40' 
+03/09/2016 22:09:34 INFO Veralite GET HTTP GET 'http://192.168.123.45:3480/data_request?id=action&output_format=json&DeviceNum=5&serviceId=urn:upnp-org:serviceId:Dimming1&action=SetLoadLevelTarget&newLoadlevelTarget=40'
+03/09/2016 22:09:34 INFO Veralite GET: Received reply: { "u:SetLoadLevelTargetResponse": { "JobID": "625" } }
+03/09/2016 22:09:34 INFO Response = Pausing the Roku in the Home Theater
+03/09/2016 22:09:45 INFO Received valid request with command = 'search breaking bad'
+03/09/2016 22:09:45 INFO 'search breaking bad' matched '\b(search|find)\b'
+03/09/2016 22:09:45 INFO Sony STR-DN1040 sending command 'INPUT_VIDEO_1' 
+03/09/2016 22:09:45 INFO Global Cache GC-100 sending command '40000,3,1,96,24,24,24,48,24,24,24,24,24,24,24,48,24,24,24,24,24,24,24,24,24,24,24,48,24,48,24,24,24,24,878 ' to device '5:3' at address '192.168.123.40' port '4998'
+03/09/2016 22:09:45 INFO Global Cache GC-100 received completeir,5:3,1
+03/09/2016 22:09:45 INFO Roku sending command 'HOME' 
+03/09/2016 22:09:45 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:09:45 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'HOME' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'DOWN' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'DOWN' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'DOWN' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'DOWN' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'DOWN' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'SELECT' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Select'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'CHAR_r' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%72'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'CHAR_e' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%65'
+03/09/2016 22:09:48 INFO Roku POST: Received reply: 
+03/09/2016 22:09:48 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:09:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:49 INFO Roku sending command 'CHAR_k' 
+03/09/2016 22:09:49 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6b'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:49 INFO Roku sending command 'CHAR_i' 
+03/09/2016 22:09:49 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%69'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:49 INFO Roku sending command 'CHAR_n' 
+03/09/2016 22:09:49 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6e'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:49 INFO Roku sending command 'CHAR_g' 
+03/09/2016 22:09:49 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%67'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:49 INFO Roku sending command 'CHAR_SPACE' 
+03/09/2016 22:09:49 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%20'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:49 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:09:49 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:49 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:09:49 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:49 INFO Roku sending command 'CHAR_d' 
+03/09/2016 22:09:49 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%64'
+03/09/2016 22:09:49 INFO Roku POST: Received reply: 
+03/09/2016 22:09:51 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:09:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:09:51 INFO Roku POST: Received reply: 
+03/09/2016 22:09:51 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:09:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:09:51 INFO Roku POST: Received reply: 
+03/09/2016 22:09:51 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:09:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:09:51 INFO Roku POST: Received reply: 
+03/09/2016 22:09:51 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:09:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:09:51 INFO Roku POST: Received reply: 
+03/09/2016 22:09:51 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:09:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:09:51 INFO Roku POST: Received reply: 
+03/09/2016 22:09:51 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:09:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:09:51 INFO Roku POST: Received reply: 
+03/09/2016 22:09:51 INFO Response = Searching for breaking bad on all Roku Channels in the Home Theater
+03/09/2016 22:15:48 INFO Received valid request with command = 'search breaking bad'
+03/09/2016 22:15:48 INFO 'search breaking bad' matched '\b(search|find)\b'
+03/09/2016 22:15:48 INFO Sony STR-DN1040 sending command 'INPUT_VIDEO_1' 
+03/09/2016 22:15:48 INFO Global Cache GC-100 sending command '40000,3,1,96,24,24,24,48,24,24,24,24,24,24,24,48,24,24,24,24,24,24,24,24,24,24,24,48,24,48,24,24,24,24,878 ' to device '5:3' at address '192.168.123.40' port '4998'
+03/09/2016 22:15:48 INFO Global Cache GC-100 received completeir,5:3,1
+03/09/2016 22:15:48 INFO Roku sending command 'HOME' 
+03/09/2016 22:15:48 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:15:48 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'HOME' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:15:51 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'DOWN' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:15:51 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'DOWN' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:15:51 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'DOWN' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:15:51 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'DOWN' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:15:51 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'DOWN' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:15:51 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'SELECT' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Select'
+03/09/2016 22:15:51 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:15:51 INFO Roku POST: Received reply: 
+03/09/2016 22:15:51 INFO Roku sending command 'CHAR_r' 
+03/09/2016 22:15:51 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%72'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_e' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%65'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_k' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6b'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_i' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%69'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_n' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6e'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_g' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%67'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_SPACE' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%20'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:52 INFO Roku sending command 'CHAR_d' 
+03/09/2016 22:15:52 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%64'
+03/09/2016 22:15:52 INFO Roku POST: Received reply: 
+03/09/2016 22:15:54 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:15:54 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:15:54 INFO Roku POST: Received reply: 
+03/09/2016 22:15:54 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:15:54 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:15:54 INFO Roku POST: Received reply: 
+03/09/2016 22:15:54 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:15:54 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:15:54 INFO Roku POST: Received reply: 
+03/09/2016 22:15:54 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:15:54 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:15:54 INFO Roku POST: Received reply: 
+03/09/2016 22:15:54 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:15:54 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:15:54 INFO Roku POST: Received reply: 
+03/09/2016 22:15:54 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:15:54 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:15:54 INFO Roku POST: Received reply: 
+03/09/2016 22:15:54 INFO Response = Searching for breaking bad on all Roku Channels in the Home Theater
+03/09/2016 22:20:11 INFO Received valid request with command = 'search breaking bad'
+03/09/2016 22:20:11 INFO 'search breaking bad' matched '\b(search|find)\b'
+03/09/2016 22:20:11 INFO Sony STR-DN1040 sending command 'INPUT_VIDEO_1' 
+03/09/2016 22:20:11 INFO Global Cache GC-100 sending command '40000,3,1,96,24,24,24,48,24,24,24,24,24,24,24,48,24,24,24,24,24,24,24,24,24,24,24,48,24,48,24,24,24,24,878 ' to device '5:3' at address '192.168.123.40' port '4998'
+03/09/2016 22:20:11 INFO Global Cache GC-100 received completeir,5:3,1
+03/09/2016 22:20:11 INFO Roku sending command 'HOME' 
+03/09/2016 22:20:11 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:20:11 INFO Roku POST: Received reply: 
+03/09/2016 22:20:14 INFO Roku sending command 'HOME' 
+03/09/2016 22:20:14 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:20:14 INFO Roku POST: Received reply: 
+03/09/2016 22:20:14 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:14 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'SELECT' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Select'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_r' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%72'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_e' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%65'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_k' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6b'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_i' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%69'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_n' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6e'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_g' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%67'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_SPACE' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%20'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:15 INFO Roku sending command 'CHAR_d' 
+03/09/2016 22:20:15 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%64'
+03/09/2016 22:20:15 INFO Roku POST: Received reply: 
+03/09/2016 22:20:17 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:17 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:17 INFO Roku POST: Received reply: 
+03/09/2016 22:20:17 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:17 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:17 INFO Roku POST: Received reply: 
+03/09/2016 22:20:17 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:17 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:17 INFO Roku POST: Received reply: 
+03/09/2016 22:20:17 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:17 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:17 INFO Roku POST: Received reply: 
+03/09/2016 22:20:17 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:17 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:17 INFO Roku POST: Received reply: 
+03/09/2016 22:20:17 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:17 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:17 INFO Roku POST: Received reply: 
+03/09/2016 22:20:17 INFO Response = Searching for breaking bad on all Roku Channels in the Home Theater
+03/09/2016 22:20:26 INFO Received valid request with command = 'pause'
+03/09/2016 22:20:26 INFO 'pause' matched '^(?=.*\b(pause|stop)\b).*$'
+03/09/2016 22:20:26 INFO Roku sending command 'PLAY' 
+03/09/2016 22:20:26 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Play'
+03/09/2016 22:20:26 INFO Roku POST: Received reply: 
+03/09/2016 22:20:26 INFO Veralite sending command 'BONUS_ROOM_LIGHT_OFF' 
+03/09/2016 22:20:26 INFO Veralite GET HTTP GET 'http://192.168.123.45:3480/data_request?id=action&output_format=xml&DeviceNum=3&serviceId=urn:upnp-org:serviceId:SwitchPower1&action=SetTarget&newTargetValue=0'
+03/09/2016 22:20:26 INFO Veralite GET: Received reply: <?xml version="1.0"?>
+<u:SetTargetResponse xmlns:u="urn:schemas-upnp-org:service:SwitchPower:1">
+<JobID>648</JobID>
+</u:SetTargetResponse>
+
+03/09/2016 22:20:26 INFO Veralite sending command 'MOVIES_SIGN_DIM_40' 
+03/09/2016 22:20:26 INFO Veralite GET HTTP GET 'http://192.168.123.45:3480/data_request?id=action&output_format=json&DeviceNum=5&serviceId=urn:upnp-org:serviceId:Dimming1&action=SetLoadLevelTarget&newLoadlevelTarget=40'
+03/09/2016 22:20:26 INFO Veralite GET: Received reply: { "u:SetLoadLevelTargetResponse": { "JobID": "649" } }
+03/09/2016 22:20:26 INFO Response = Pausing the Roku in the Home Theater
+03/09/2016 22:20:33 INFO Received valid request with command = 'search breaking bad'
+03/09/2016 22:20:33 INFO 'search breaking bad' matched '\b(search|find)\b'
+03/09/2016 22:20:33 INFO Sony STR-DN1040 sending command 'INPUT_VIDEO_1' 
+03/09/2016 22:20:33 INFO Global Cache GC-100 sending command '40000,3,1,96,24,24,24,48,24,24,24,24,24,24,24,48,24,24,24,24,24,24,24,24,24,24,24,48,24,48,24,24,24,24,878 ' to device '5:3' at address '192.168.123.40' port '4998'
+03/09/2016 22:20:33 INFO Global Cache GC-100 received completeir,5:3,1
+03/09/2016 22:20:33 INFO Roku sending command 'HOME' 
+03/09/2016 22:20:33 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:20:33 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'HOME' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'DOWN' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'SELECT' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Select'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'CHAR_r' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%72'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'CHAR_e' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%65'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'CHAR_k' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6b'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'CHAR_i' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%69'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'CHAR_n' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6e'
+03/09/2016 22:20:36 INFO Roku POST: Received reply: 
+03/09/2016 22:20:36 INFO Roku sending command 'CHAR_g' 
+03/09/2016 22:20:36 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%67'
+03/09/2016 22:20:37 INFO Roku POST: Received reply: 
+03/09/2016 22:20:37 INFO Roku sending command 'CHAR_SPACE' 
+03/09/2016 22:20:37 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%20'
+03/09/2016 22:20:37 INFO Roku POST: Received reply: 
+03/09/2016 22:20:37 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:20:37 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:20:37 INFO Roku POST: Received reply: 
+03/09/2016 22:20:37 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:20:37 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:20:37 INFO Roku POST: Received reply: 
+03/09/2016 22:20:37 INFO Roku sending command 'CHAR_d' 
+03/09/2016 22:20:37 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%64'
+03/09/2016 22:20:37 INFO Roku POST: Received reply: 
+03/09/2016 22:20:39 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:39 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:39 INFO Roku POST: Received reply: 
+03/09/2016 22:20:39 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:39 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:39 INFO Roku POST: Received reply: 
+03/09/2016 22:20:39 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:39 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:39 INFO Roku POST: Received reply: 
+03/09/2016 22:20:39 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:39 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:39 INFO Roku POST: Received reply: 
+03/09/2016 22:20:39 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:39 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:39 INFO Roku POST: Received reply: 
+03/09/2016 22:20:39 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:20:39 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:20:39 INFO Roku POST: Received reply: 
+03/09/2016 22:20:39 INFO Response = Searching for breaking bad on all Roku Channels in the Home Theater
+03/09/2016 22:36:52 INFO Received valid request with command = 'search breaking bad'
+03/09/2016 22:36:52 INFO 'search breaking bad' matched '\b(search|find)\b'
+03/09/2016 22:36:52 INFO Sony STR-DN1040 sending command 'INPUT_VIDEO_1' 
+03/09/2016 22:36:52 INFO Global Cache GC-100 sending command '40000,3,1,96,24,24,24,48,24,24,24,24,24,24,24,48,24,24,24,24,24,24,24,24,24,24,24,48,24,48,24,24,24,24,878 ' to device '5:3' at address '192.168.123.40' port '4998'
+03/09/2016 22:36:53 INFO Global Cache GC-100 received completeir,5:3,1
+03/09/2016 22:36:53 INFO Roku sending command 'HOME' 
+03/09/2016 22:36:53 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:36:53 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'HOME' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Home'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'DOWN' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'DOWN' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'DOWN' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'DOWN' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'DOWN' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Down'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'SELECT' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Select'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_r' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%72'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_e' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%65'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_k' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6b'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_i' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%69'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_n' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%6e'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_g' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%67'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_SPACE' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%20'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_b' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%62'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_a' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%61'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:56 INFO Roku sending command 'CHAR_d' 
+03/09/2016 22:36:56 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Lit_%64'
+03/09/2016 22:36:56 INFO Roku POST: Received reply: 
+03/09/2016 22:36:58 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:36:58 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:36:58 INFO Roku POST: Received reply: 
+03/09/2016 22:36:58 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:36:58 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:36:58 INFO Roku POST: Received reply: 
+03/09/2016 22:36:58 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:36:58 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:36:59 INFO Roku POST: Received reply: 
+03/09/2016 22:36:59 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:36:59 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:36:59 INFO Roku POST: Received reply: 
+03/09/2016 22:36:59 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:36:59 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:36:59 INFO Roku POST: Received reply: 
+03/09/2016 22:36:59 INFO Roku sending command 'RIGHT' 
+03/09/2016 22:36:59 INFO Roku POST HTTP POST 'http://192.168.123.41:8060/keypress/Right'
+03/09/2016 22:36:59 INFO Roku POST: Received reply: 
+03/09/2016 22:36:59 INFO Response = Searching for breaking bad on all Roku Channels in the Home Theater
