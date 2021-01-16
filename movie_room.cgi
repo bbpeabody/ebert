@@ -43,8 +43,8 @@ my ($requestType, $request, $command) = check_request($postData);
 # Process the request
 if ($requestType eq "IntentRequest")
 {
-    my $response = process_command($command);
-    send_response($response, $request);
+    my ($response, $attribute) = process_command($command);
+    send_response($response, $attribute, $request);
 } 
 elsif ($requestType eq "SessionEndedRequest")
 {
@@ -73,13 +73,14 @@ sub process_command
     {
         # We didn't match any of our regular expressions, so return a response stating 
         # that we didn't understand the command
-        return "The Home Theater did not understand $command";
+        return ("The Home Theater did not understand $command", 0);
     }
 }
 
 sub send_response
 {
     my $response = shift;
+    my $attribute = shift;
     my $request = shift;
     $log->info("Response = " . $response);
     my $json_hash = {};
@@ -87,15 +88,18 @@ sub send_response
     my $outputSpeech_hash = {};
     my $card_hash = {};
     my $reprompt_hash = {};
-
+    my $sessionAttributes_hash = {
+        previous_command => $attribute
+    };
     $json_hash->{version} = $request->{version};
-    $json_hash->{sessionAttributes} = JSON::null;
+    #$json_hash->{sessionAttributes} = JSON::null;
+    $json_hash->{sessionAttributes} = $attribute ? $sessionAttributes_hash : JSON::null; 
     $json_hash->{response} = $response_hash;
 
     $response_hash->{outputSpeech} = $outputSpeech_hash;
     $response_hash->{card} = $card_hash;
     $response_hash->{reprompt} = $reprompt_hash;
-    $response_hash->{shouldEndSession} = JSON::true;
+    $response_hash->{shouldEndSession} = $attribute ? JSON::false : JSON::true;
     
     $outputSpeech_hash->{type} = "PlainText";
     $outputSpeech_hash->{text} = $response;
@@ -114,7 +118,8 @@ sub check_request
 {
     my $jsonEncodedRequest = shift;
     # Convert the JSON encoded object into a perl hash.
-    my $decodedRequest = decode_json $jsonEncodedRequest;  
+    my $decodedRequest = decode_json $jsonEncodedRequest;
+    $log->info(Dumper($decodedRequest));  
     my $checkIntentType = "IntentRequest";
     my $checkSessionEndedType = "SessionEndedRequest";
     my $checkCommandName = "command";
@@ -122,6 +127,7 @@ sub check_request
     my $userId = $decodedRequest->{session}->{user}->{userId};
     my $type = $decodedRequest->{request}->{type};
     my $commandName = $decodedRequest->{request}->{intent}->{slots}->{command}->{name};
+    my $previousCommand = $decodedRequest->{session}->{attributes}->{previous_command};
     if ($appId ne APP_ID)
     {
         $log->error("Request 'aplicationId' is invalid. Received: $appId Expected: " . APP_ID);
@@ -142,7 +148,7 @@ sub check_request
         $log->error("Request 'command->name'is invalid. Received: $commandName Expected: $checkCommandName");
         die;
     }    
-    my $cmd = $decodedRequest->{request}->{intent}->{slots}->{command}->{value};
+    my $cmd = $previousCommand . " " . $decodedRequest->{request}->{intent}->{slots}->{command}->{value};
     $log->info("Received valid request with command = '$cmd'");
     return ($type, $decodedRequest, $cmd);
 }
@@ -182,7 +188,7 @@ sub getFunctionTable
             => sub  { return $ht->search(shift); }
         
         # Match examples 'watch netflix', 'listen to pandora', 'switch to espn'
-        ,'^(?=.*\b(watch|turn|switch|listen|open)\b)(?=.*\b(' . $rokuChannels . ')\b).*$'            
+        ,'^(?=.*\b(watch|turn|switch|listen|open|launch)\b)(?=.*\b(' . $rokuChannels . ')\b).*$'            
             => sub  { return $ht->watch(shift); }
         
         # Match examples 'turn the lights off', 'lights off'
@@ -212,6 +218,14 @@ sub getFunctionTable
         # Match examples 'pause', 'stop'
         ,'^(?=.*\b(pause|stop)\b).*$'            
             => sub  { return $ht->pauseRoku; }
+        
+        # Match examples 'navigate'
+        ,'^(?=.*\b(navigate)\b).*$'            
+            => sub  { return $ht->navigate(shift); }
+        
+        # Match examples 'keyboard'
+        ,'^(?=.*\b(letters|alphabet|letter|keyboard|type|typing)\b).*$'            
+            => sub  { return $ht->keyboard(shift); }
     );
     return \%h;
 }

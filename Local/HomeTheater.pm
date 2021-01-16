@@ -54,11 +54,11 @@ sub on
 	if ($self->{_receiver}->sendCommand('POWER_ON') ||
 		$self->{_projector}->sendCommand('POWER_ON')  ) 
 	{
-		return "Failed to turn on " . $self->getName();
+		return ("Failed to turn on " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Turning on the " . $self->getName();
+		return ("Turning on the " . $self->getName(), 0);
 	} 
 }
 
@@ -72,65 +72,65 @@ sub off
  	$fail |= $self->{_projector}->sendCommand('POWER_OFF');
   	if ($fail) 
 	{
-		return "Failed to turn off " . $self->getName();
+		return ("Failed to turn off " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Turning off the " . $self->getName();
+		return ("Turning off the " . $self->getName(), 0);
 	} 
 }
 
 sub lightsOff
 {
     my $self = shift;
-    my $suppressMessage = shift;
+    #my $suppressMessage = shift;
     my $fail = 0;
     $fail |= $self->{_veralite}->sendCommand('BONUS_ROOM_LIGHT_OFF');
     $fail |= $self->{_veralite}->sendCommand('MOVIES_SIGN_OFF');
-  	return $fail if defined $suppressMessage;
+  	return $fail unless wantarray;
   	if ($fail) 
 	{
-		return "Failed to turn off the lights in the " . $self->getName();
+		return ("Failed to turn off the lights in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Turning off the lights in the " . $self->getName();
+		return ("Turning off the lights in the " . $self->getName(), 0);
 	} 
 }
 
 sub lightsDim
 {
     my $self = shift;
-    my $suppressMessage = shift;
+    #$my $suppressMessage = shift;
     my $fail = 0;
     $fail |= $self->{_veralite}->sendCommand('BONUS_ROOM_LIGHT_OFF');
     $fail |= $self->{_veralite}->sendCommand('MOVIES_SIGN_DIM_40');
-  	return $fail if defined $suppressMessage;
+  	return $fail unless wantarray;
   	if ($fail) 
 	{
-		return "Failed to dim the lights in the " . $self->getName();
+		return ("Failed to dim the lights in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Dimming the lights in the " . $self->getName();
+		return ("Dimming the lights in the " . $self->getName(), 0);
 	} 
 }
 
 sub lightsOn
 {
     my $self = shift;
-    my $suppressMessage = shift;
+    #my $suppressMessage = shift;
     my $fail = 0;
     $fail |= $self->{_veralite}->sendCommand('BONUS_ROOM_LIGHT_ON');
     $fail |= $self->{_veralite}->sendCommand('MOVIES_SIGN_DIM_60');
-  	return $fail if defined $suppressMessage;
+  	return $fail unless wantarray;
     if ($fail) 
 	{
-		return "Failed to turn on the lights in the " . $self->getName();
+		return ("Failed to turn on the lights in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Turning on the lights in the " . $self->getName();
+		return ("Turning on the lights in the " . $self->getName(), 0);
 	} 
 }
 
@@ -141,11 +141,11 @@ sub fanOff
     $fail |= $self->{_veralite}->sendCommand('BONUS_ROOM_FAN_OFF');
   	if ($fail) 
 	{
-		return "Failed to turn off the fans in the " . $self->getName();
+		return ("Failed to turn off the fans in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Turning off the fans in the " . $self->getName();
+		return ("Turning off the fans in the " . $self->getName(), 0);
 	} 
 }
 
@@ -156,11 +156,11 @@ sub fanOn
     $fail |= $self->{_veralite}->sendCommand('BONUS_ROOM_FAN_ON');
   	if ($fail) 
 	{
-		return "Failed to turn on the fans in the " . $self->getName();
+		return ("Failed to turn on the fans in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Turning on the fans in the " . $self->getName();
+		return ("Turning on the fans in the " . $self->getName(), 0);
 	} 
 }
 
@@ -182,11 +182,11 @@ sub volumeUp
 
 	if ($fail)
 	{
-		return "Failed to increase the volume in the " . $self->getName();
+		return ("Failed to increase the volume in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Increasing the volume in the " . $self->getName();
+		return ("Increasing the volume in the " . $self->getName(), 0);
 	} 
 }
 
@@ -201,11 +201,11 @@ sub volumeDown
 	}
 	if ($fail)
 	{
-		return "Failed to decrease the volume in the " . $self->getName();
+		return ("Failed to decrease the volume in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Decreasing the volume in the " . $self->getName();
+		return ("Decreasing the volume in the " . $self->getName(), 0);
 	} 
 }
 
@@ -214,11 +214,11 @@ sub muteToggle
 	my $self = shift;
 	if ($self->{_receiver}->sendCommand('MUTE_TOGGLE'))
 	{
-		return "Failed to toggle mute on in the " . $self->getName();
+		return ("Failed to toggle mute on in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Toggling mute in the " . $self->getName();
+		return ("Toggling mute in the " . $self->getName(), 0);
 	} 
 }
 
@@ -261,11 +261,11 @@ sub search
 	$fail |= $self->{_roku}->sendCommand('RIGHT');
 	if ($fail)
 	{
-		return "Search failed in the " . $self->getName();
+		return ("Search failed in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Searching for $text on all Roku Channels in the " . $self->getName();
+		return ("Searching for $text on all Roku Channels in the " . $self->getName() . " . Navigate?", "navigate");
 	} 
 }
 
@@ -273,9 +273,9 @@ sub watch
 {
 	my ($self, $command) = @_;
 	my $fail = 0;
-	my $rokuWatchHash = Roku::watchList();
+	my $rokuWatchHash = Local::Roku::watchList();
 	my $rokuChannels = join("|", keys(%$rokuWatchHash));
-	if ($command =~ /($rokuChannels)/) {
+    if ($command =~ /($rokuChannels)/) {
 		$rokuChannel = $1;
 		$rokuCommand = $rokuWatchHash->{$rokuChannel};
 		$fail |= $self->rokuInput;
@@ -287,15 +287,15 @@ sub watch
 	}
     if (! $fail) 
     {
-        $fail |= $self->lightsOff(1);
+        $fail |= $self->lightsOff;
     }	
 	if ($fail)
 	{
-		return "Failed to switch " . $self->getName() . " to $rokuChannel.";
+		return ("Failed to switch " . $self->getName() . " to $rokuChannel.", 0);
 	} 
 	else 
 	{
-		return "Let's watch $rokuChannel in the " . $self->getName();
+		return ("Let's watch $rokuChannel in the " . $self->getName(), 0);
 	} 
 }
 
@@ -306,15 +306,15 @@ sub pauseRoku
 	$fail |= $self->{_roku}->sendCommand('PLAY');
     if (! $fail) 
     {
-        $fail |= $self->lightsDim(1);
+        $fail |= $self->lightsDim;
     }	
 	if ($fail)
 	{
-		return "Failed to pause Roku in the " . $self->getName();
+		return ("Failed to pause Roku in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Pausing the Roku in the " . $self->getName();
+		return ("Pausing the Roku in the " . $self->getName(), 0);
 	} 
 }
 
@@ -325,16 +325,139 @@ sub playRoku
 	$fail |= $self->{_roku}->sendCommand('PLAY');
     if (! $fail) 
     {
-        $fail |= $self->lightsOff(1);
+        $fail |= $self->lightsOff;
     }	
 	if ($fail)
 	{
-		return "Failed to play Roku in the " . $self->getName();
+		return ("Failed to play Roku in the " . $self->getName(), 0);
 	} 
 	else 
 	{
-		return "Pressing play on the Roku in the " . $self->getName();
+		return ("Pressing play on the Roku in the " . $self->getName(), 0);
 	} 
+}
+
+sub keyboard
+{
+    my $self = shift;
+    my $cmd = shift;
+    $cmd =~ s/\s+//g;
+    $cmd =~ s/(letter|letters|keyboard|numbers|typing|type)//g;
+    my $fail = 0;
+	my @chars = split(//,$cmd);
+	foreach my $char (@chars)
+	{
+		if (ord($char) == 32)
+		{
+			$char = "SPACE";
+		}
+		$fail |= $self->{_roku}->sendCommand("CHAR_$char");
+	}
+    return ("Typing?", $fail ? 0 : "letter");
+}
+
+sub navigate
+{
+    my $self = shift;
+    my $cmd = shift;
+    $cmd =~ s/\s+//g;
+    $cmd =~ s/navigate//g;
+    my $fail = 0;
+    if ($cmd =~ m/^up(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('UP');
+        if ($1)
+        {
+            my ($rm, $rf) = $self->navigate($1);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ m/^down(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('DOWN');
+        if ($1)
+        {
+            my ($rm, $rf) = $self->navigate($1);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ m/^left(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('LEFT');
+        if ($1)
+        {
+            my ($rm, $rf) = $self->navigate($1);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ /^(right|write)(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('RIGHT');
+        if ($2)
+        {
+            my ($rm, $rf) = $self->navigate($2);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ /^(fastforward|forward)(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('FWD');
+        if ($2)
+        {
+            my ($rm, $rf) = $self->navigate($2);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ /^(rewind|reverse)(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('REV');
+        if ($2)
+        {
+            my ($rm, $rf) = $self->navigate($2);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ /^(play)(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('PLAY');
+        if ($2)
+        {
+            my ($rm, $rf) = $self->navigate($2);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ /^(back)(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('BACK');
+        if ($2)
+        {
+            my ($rm, $rf) = $self->navigate($2);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ /^(home)(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('HOME');
+        if ($2)
+        {
+            my ($rm, $rf) = $self->navigate($2);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ /^(ok|okay|select|enter)(.*)/)
+    {
+	    $fail |= $self->{_roku}->sendCommand('SELECT');
+        if ($2)
+        {
+            my ($rm, $rf) = $self->navigate($2);
+            $fail |= $rf;   
+        }
+    }
+    elsif ($cmd =~ m/(done|quit|cancel|end|stop|return)/)
+    {
+        return ("Finished navigating", 0);
+    }
+    return ("Navigate?", $fail ? 0 : "navigate");
 }
 
 return 1;
